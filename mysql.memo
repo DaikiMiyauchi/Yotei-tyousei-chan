@@ -1,0 +1,30 @@
+CREATE TABLE user(
+  userId int not null primary key,
+  username varchar(30)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE schedule(
+  scheduleId int(50) primary key,
+  scheduleName varchar(50),
+  memo varchar(255),
+  createdby varchar(50),
+  updateAt varchar(50)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE candidate(
+  candidateId int(20) primary key,
+  candidateName varchar(30),
+  scheduleId varchar(50)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE availability(
+  candidateId int(20) primary key,
+  userId int not null primary key,
+  availability int(50),
+  scheduleId int(50)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into posts (task_name, create_date, create_person, comment, nittei) values
+('タスク名',now(),'作成者','コメント','日程'),
+('タスク名',now(),'作成者','コメント','日程'),
+('タスク名',now(),'作成者','コメント','日程');
