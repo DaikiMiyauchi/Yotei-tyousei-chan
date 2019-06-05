@@ -36,6 +36,14 @@
 	Router::connect('/touroku/*', array('controller' => 'touroku', 'action' => 'touroku'));
 
 	Router::connect('/posts/view',array('controller' => 'posts'));
+	Router::connect('/user/*',array('controller' => 'users'));
+
+
+
+	// Router::connect('/schedules/*',array('controller' => 'schedules', 'action' => 'add'));
+
+		
+	// Router::connect('/users/*',array('controller' => 'users'));
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on
